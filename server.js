@@ -5,11 +5,6 @@ const hubsRouter = require('./hubs/hubs-router.js');
 
 const server = express();
 
-function dateLogger (req, res, next) {
-  console.log(new Date().toISOString())
-next()
-}
-
 function logger(req, res, next) {
   console.log(`[DATE: ${new Date().toISOString()}] METHOD & URL: ${req.method} to ${req.url}`)
   next()
